@@ -1,143 +1,82 @@
-# SimCorp-Expert
-/*
-EXERCISE #1
+# SimCorp-Expert 🌟
 
-A  boomerang can be defined as: sub-array of length 3, with the first and last digits being the same and the middle digit being different. So create a function that returns the total number of boomerangs in an array.
+## Challenge: JavaScript Functions 📝
 
-Example : [1,4,1]
+### Descripción General
 
-Expected result   
-counter([9, 5, 9, 5, 1, 1, 1]) ➞ 2
-counter([5, 6, 6, 7, 6, 3, 9]) ➞ 1
-counter([4, 4, 4, 9, 9, 9, 9]) ➞ 0
+Bienvenido al Challenge de Funciones de JavaScript
 
-INFO
+En este desafío, trabajé con una serie de ejercicios que pusieron a prueba mis habilidades con funciones de JavaScript. Los ejercicios fueron diseñados para ser simples pero efectivos, enfocándose en diferentes aspectos de la manipulación de arreglos y cadenas
 
-[2, 2, 2] (triple identical digits) is NOT considered a boomerang because the middle digit is identical to the first and last.
+Además de resolver los ejercicios, estructuré el código de manera clara y subí la información a mi organización en GitHub. Esto ofrece una visión completa del flujo de trabajo desde la escritura del código hasta su integración en un proyecto
 
-*/
+### Ejercicios Resueltos 📂
 
-function counter(list){
-	//you can show the result as you would like
-}
+Aquí están los ejercicios que he resuelto:
 
-counter([9, 5, 9, 5, 1, 1, 1]);
-counter([5, 6, 6, 7, 6, 3, 9]);
-counter([4, 4, 4, 9, 9, 9, 9]);
+1. Exercise 1
+2. Exercise 2
+3. Exercise 3
+4. Exercise 4
+5. Exercise 5
 
+Cada ejercicio está en su propio archivo y puedes revisar las soluciones directamente para ver cómo fueron implementadas y a su vez ejecutar los test correspondientes por cada funcion
 
-/*
-EXERCISE #2
+### Tests (paso a paso) 🧪
 
-Given a string of letters, create a function that returns an array with the separator that yields the longest possible substring, provided that:
+Para asegurar que todas las funciones están habilitadas y se ejecutan correctamente, puede utilizar Jest para ejecutar los tests. Aquí están los pasos que puede seguir para correr los tests:
 
-The substring starts and ends with the separator.
-The separator doesn't occur inside the substring other than at the ends.
-If two or more separators yield substrings with the same length, they should appear in alphabetical order.
-Examples
-separator("supercalifragilistic") ➞ ["s"]
-// The longest substring is "supercalifragilis".
+1. Instalé Jest con:
 
-separator("laboratory") ➞ ["a", "o", "r"]
-// "abora", "orato" and "rator" are the same length.
+    ```bash
+    npm install --save-dev jest
+    ```
 
-separator("candle") ➞ []
-// No possible substrings.
+   ó
 
-INFO
-All substrings should be at least of length 2 (i.e. no single-letter substrings).
-Expect lowercase alphabetic characters only.
+    ```bash
+    npm i --D jest
+    ```
 
-*/
+2. Corre los tests con el siguiente comando:
 
+   ```bash
+   npm test
+   ```
 
+Esto ejecutó todos los tests y verificó que las funciones estuvieran funcionando correctamente.
 
-function separator(str){
-//you can show the result as you would like
-}
+#### Proceso de Revisión de Código 🔍
 
-separator('happyanniversaryqontigo')
-separator('futureofwork')
-separator('Intranet')
+Para la revisión y mejora del código, seguí el siguiente flujo:
 
-/*
-EXERCISE #3
+1. ***Editar y Probar***: Modifiqué directamente los archivos de los ejercicios.
 
-Write a function that returns the longest non-repeating substring for a string input.
+2. ***Ejecutar Tests***: Utilicé Jest para ejecutar los tests y verificar que todas las funciones estuvieran correctas.
 
-Expected Result   
-longestSubstring("abcabcbb") ➞ "abc"
-longestSubstring("aaaaaa") ➞ "a"
-longestSubstring("abcde") ➞ "abcde"
-longestSubstring("abcda") ➞ "abcd
+3. ***Conventional Commits***: Utilicé convenciones de commits para mantener un historial de cambios claro y estructurado
+Si no esta familiarizado con Conventional Commits aquí dejo un pequeño ejemplo y la pagina web para poder investigar sobre la estructura implementada:
 
+Ejemplo:e
 
-INFO
-If multiple substrings tie in length, return the one which occurs first.
-Bonus: Can you solve this problem in linear time?
+  ```bash
+   git commit -m "feat: add solution for exercise 1"
+  ```
 
-*/
+Link: [Conventional Commits]
 
-function longestSubstring(str){
-	//you can show the result as you would like
-}
+[Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
 
-longestSubstring("aaaaaa");
-longestSubstring("abcde");
-longestSubstring("abcda");
-longestSubstring("abcda");
+4. ***Revisión y Optimización***: Revisé el código para optimizarlo. Esto incluyó la mejora de la eficiencia, limpieza de código y adición de más tests o automatización para asegurar la calidad.
 
+### Conclusión 📌
 
-/*
-Exercise #4
+He subido el código siguiendo mi metodología habitual, que consiste en resolver cada ejercicio punto por punto, asegurándome de que la estructura sea clara y funcional. Después de completar cada ejercicio, me enfoqué en optimizar el código y en agregar tests para verificar que todas las funciones trabajen correctamente y eficientemente
 
-Given a string containing just the characters ( and ), find the length of the longest valid (well-formed) parentheses substring.
+Utilicé Conventional Commits para mantener un historial de cambios claro y estructurado, lo que facilita la revisión y el seguimiento del desarrollo del proyecto
 
-Expected Result 
-sizeParentheses("(()") ➞ 2
-// Longest valid parentheses substring is "()"
+Aunque en este proyecto no utilicé TDD (Test-Driven Development) desde el inicio, añadí pruebas después de desarrollar las funciones para asegurarme de su correcto funcionamiento. En futuros proyectos, podría considerar comenzar con TDD para asegurar una cobertura de pruebas más completa desde el principio
 
-sizeParentheses(")()())") ➞ 4
-// Longest valid parentheses substring is "()()"
+Aprecio tu tiempo y dedicación en revisar mi trabajo. Si tienes alguna pregunta o sugerencia, estaré encantado de discutirla
 
-sizeParentheses("()))))(()())(") ➞ 6
-
-*/
-
-
-function sizeParentheses(str){
-	//you can show the result as you would like
-}
-
-sizeParentheses("(()");
-sizeParentheses(")()())");
-sizeParentheses("()))))(()())(");
-
-
-/*
-Exercise #5
-
-The length property on an array will return the number of elements in the array. For example, the array below contains 2 elements:
-
-Example
-  [1, [2, 3]]
-  2 elements, number 1 and array [2, 3]
-
-Suppose we instead wanted to know the total number of non-nested items in the nested array. In the above case, [1, [2, 3]] contains 3 non-nested items, 1, 2 and 3.
-
-
-Expected Result 
-  getLength([1, [2, 3]]) ➞ 3
-  getLength([1, [2, [3, 4]]]) ➞ 4
-  getLength([1, [2, [3, [4, [5, 6]]]]]) ➞ 6
-  getLength([1, [2], 1, [2], 1]) ➞ 5
-*/
-
-function getLength(arr){
-	//you can show the result as you would like
-}
-
-getLength([1, [2, 3]]);
-getLength([1, [2, [3, 4]]]);
-getLength([1, [2, [3, [4, [5, 6]]]]]);
-getLength([1, [2], 1, [2], 1]);
+¡Gracias por revisar mi trabajo! 🚀
