@@ -32,3 +32,4 @@ separator('happyanniversaryqontigo')
 separator('futureofwork')
 separator('Intranet')
   
+export default separator;

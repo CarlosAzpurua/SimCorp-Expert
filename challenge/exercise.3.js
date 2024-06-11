@@ -24,3 +24,5 @@ longestSubstring("aaaaaa");
 longestSubstring("abcde");
 longestSubstring("abcda");
 longestSubstring("abcda");
+
+export default longestSubstring;

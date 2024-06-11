@@ -22,3 +22,5 @@ function sizeParentheses(str){
 sizeParentheses("(()");
 sizeParentheses(")()())");
 sizeParentheses("()))))(()())(");
+
+export default sizeParentheses;
