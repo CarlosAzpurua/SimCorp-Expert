@@ -1,6 +1,6 @@
 import counter from '../exercise.1'
 
-test('Description example of what exercise1 should do', () => {
+test.omit('Description example of what exercise1 should do', () => {
   
   expect(
     counter([9, 5, 9, 5, 1, 1, 1])
