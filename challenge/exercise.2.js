@@ -23,13 +23,52 @@ Expect lowercase alphabetic characters only.
 */
 
 
+/**
+ * The substring starts and ends with the separator.
+ * The separator doesn't occur inside the substring other than at the ends.
+ * If two or more separators yield substrings with the same length, they should appear in alphabetical order.
+ * 
+ * 
+ * Finds the characters in a string that have the longest distance between two consecutive 
+ * occurrences consecutive without the character repeating in between.
+ *
+ * @param {string} str 
+ * @return {Array} 
+*/
+function separator(str) {
 
-function separator(str){
-  //you can show the result as you would like
+  if (str.length < 2 ) {
+    return [];
+  }
+
+  const charMap = new Map();
+  const result = new Set();
+  let maxDistance = 0; 
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+
+    if (charMap.has(char)) { // duplication inside
+      const prevIndex = charMap.get(char); 
+      const distance = i - prevIndex + 1;
+
+      if (distance > maxDistance) { 
+        maxDistance = distance;
+        result.clear()
+        result.add(char);
+      } else if (distance === maxDistance) {
+        result.add(char);
+      }
+    } else {
+      charMap.set(char, i);
+    }
+  }
+
+  return [...result];
 }
 
-separator('happyanniversaryqontigo')
-separator('futureofwork')
-separator('Intranet')
-  
-export default separator;
+separator('happyanniversaryqontigo');
+separator('futureofwork');
+separator('Intranet');
+
+console.log(separator('supercalifragilis'))
