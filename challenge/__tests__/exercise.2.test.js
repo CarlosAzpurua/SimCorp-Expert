@@ -1,4 +1,4 @@
-import separator from '../exercise.2'
+import separator from '../exercise.2';
 
 test('Description example of what exercise2 should do', () => {
   

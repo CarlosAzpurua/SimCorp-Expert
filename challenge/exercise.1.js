@@ -52,3 +52,5 @@ function counter(list){
 counter([9, 5, 9, 5, 1, 1, 1]);
 counter([5, 6, 6, 7, 6, 3, 9]);
 counter([4, 4, 4, 9, 9, 9, 9]);
+
+export default counter

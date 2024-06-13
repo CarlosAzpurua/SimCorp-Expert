@@ -71,4 +71,4 @@ separator('happyanniversaryqontigo');
 separator('futureofwork');
 separator('Intranet');
 
-console.log(separator('supercalifragilis'))
+export default separator;

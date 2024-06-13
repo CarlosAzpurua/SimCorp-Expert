@@ -51,4 +51,4 @@ longestSubstring("abcde");
 longestSubstring("abcda");
 longestSubstring("abcdefgabcbb");
 
-
+export default longestSubstring;
