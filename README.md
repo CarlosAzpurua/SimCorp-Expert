@@ -46,9 +46,9 @@ Para asegurar que todas las funciones están habilitadas y se ejecutan correctam
 
 Esto ejecutará todos los tests y verificará que las funciones estén funcionando correctamente.
 
-#### Nota
-
-El uso de Babel (@babel/core y @babel/preset-env) es necesario porque Jest necesita soporte para ES6.
+```bash
+  Nota: El uso de `Babel, @babel/core y @babel/preset-env` es necesario porque Jest necesita soporte para ES6.
+```
 
 #### Proceso de Revisión de Código 🔍
 
