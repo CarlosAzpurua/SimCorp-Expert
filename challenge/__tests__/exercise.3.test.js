@@ -1,15 +1,10 @@
 import longestSubstring from '../exercise.3'
 
-test('Description example of what exercise3 should do', () => {
-  
-    expect(
-      longestSubstring("aaaaaa")
-    ).toBe('expected output');
-    
-    /**
-      longestSubstring("aaaaaa");
-      longestSubstring("abcde");
-      longestSubstring("abcda");
-      longestSubstring("abcda");
-    */
+describe('Function longestSubstring:', () => {
+  test('finds the longest substring with no repeated characters', () => {
+    expect(longestSubstring("aaaaaa")).toBe("a");
+    expect(longestSubstring("abcde")).toBe("abcde");
+    expect(longestSubstring("abcda")).toBe("abcd");
+    expect(longestSubstring("abcdefgabcbb")).toBe("abcdefg");
+  });
 });

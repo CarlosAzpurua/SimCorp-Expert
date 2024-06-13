@@ -1,15 +1,9 @@
 import separator from '../exercise.2';
 
-test('Description example of what exercise2 should do', () => {
-  
-  expect(
-    separator('happyanniversaryqontigo')
-  ).toBe('expected output');
-
-  /**
-    separator('happyanniversaryqontigo')
-    separator('futureofwork')
-    separator('Intranet')
-  */
-
+describe('Function separator:', () => {
+  test('returns an array with the separator that yields the longest possible substring', () => {
+    expect(separator('supercalifragilistic')).toEqual(['s']);
+    expect(separator('laboratory')).toEqual(['a', 'o', 'r']);
+    expect(separator('candle')).toEqual([]);
+  });
 });

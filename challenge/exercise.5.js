@@ -18,7 +18,7 @@ Expected Result
 */
 
 /**
- * Gets the total number of non-nested items in an array. 
+ * Gets the total number of non nested items in an array. 
  * 
  * @param {Array} arr 
  * @return {number} 

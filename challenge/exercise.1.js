@@ -28,7 +28,7 @@ INFO
  * @param {Array} list 
  * @return {number} 
  */
-function counter(list){
+function counter(list) {
 
 	if (list.length < 3) {
     return 0;

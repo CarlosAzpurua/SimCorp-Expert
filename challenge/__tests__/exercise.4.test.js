@@ -1,14 +1,9 @@
 import sizeParentheses from '../exercise.4'
 
-test('Description example of what exercise4 should do', () => {
-  
-  expect(
-    sizeParentheses("(()")
-  ).toBe('expected output');
-
-  /**
-    sizeParentheses("(()");
-    sizeParentheses(")()())");
-    sizeParentheses("()))))(()())(");
-  */
+describe('Function sizeParentheses:', () => {
+  test('calculates the size of the longest substring of balanced parentheses', () => {
+    expect(sizeParentheses("(()")).toBe(2);
+    expect(sizeParentheses(")()())")).toBe(4);
+    expect(sizeParentheses("()))))(()())(")).toBe(6);
+  });
 });
