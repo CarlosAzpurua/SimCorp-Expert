@@ -29,13 +29,13 @@ Para asegurar que todas las funciones están habilitadas y se ejecutan correctam
 1. Instalé Jest con:
 
     ```bash
-    npm install --save-dev jest
+    npm install 
     ```
 
-   ó
+   ó si desea instalar cada elemento de manera individual
 
     ```bash
-    npm i --D jest
+    npm install --save-dev jest babel-jest @babel/core @babel/preset-env
     ```
 
 2. Corre los tests con el siguiente comando:
@@ -44,7 +44,11 @@ Para asegurar que todas las funciones están habilitadas y se ejecutan correctam
    npm test
    ```
 
-Esto ejecutó todos los tests y verificó que las funciones estuvieran funcionando correctamente.
+Esto ejecutará todos los tests y verificará que las funciones estén funcionando correctamente.
+
+#### Nota
+
+El uso de Babel (@babel/core y @babel/preset-env) es necesario porque Jest necesita soporte para ES6.
 
 #### Proceso de Revisión de Código 🔍
 
@@ -57,7 +61,7 @@ Para la revisión y mejora del código, seguí el siguiente flujo:
 3. ***Conventional Commits***: Utilicé convenciones de commits para mantener un historial de cambios claro y estructurado
 Si no esta familiarizado con Conventional Commits aquí dejo un pequeño ejemplo y la pagina web para poder investigar sobre la estructura implementada:
 
-Ejemplo:e
+Ejemplo:
 
   ```bash
    git commit -m "feat: add solution for exercise 1"
