@@ -46,10 +46,9 @@ function longestSubstring(str) {
   return maxSubstring;
 }
 
-console.log(
-	longestSubstring("aaaaaa"),
-	longestSubstring("abcde"),
-	longestSubstring("abcda"),
-	longestSubstring("abcdefgabcbb"),
-)
+longestSubstring("aaaaaa");
+longestSubstring("abcde");
+longestSubstring("abcda");
+longestSubstring("abcdefgabcbb");
+
 

@@ -39,8 +39,6 @@ function sizeParentheses(str) {
   return maxLength; 
 }
 
-console.log(
-	sizeParentheses("(()"), // ➞ 2
-	sizeParentheses(")()())"), // ➞ 4
-	sizeParentheses("()))))(()())("), // ➞ 6
-)
+sizeParentheses("(()"); // ➞ 2
+sizeParentheses(")()())"); // ➞ 4
+sizeParentheses("()))))(()())("); // ➞ 6

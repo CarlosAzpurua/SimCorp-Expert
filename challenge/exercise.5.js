@@ -18,7 +18,7 @@ Expected Result
 */
 
 /**
- * Gets the total number of non-nested items in an array. *
+ * Gets the total number of non-nested items in an array. 
  * 
  * @param {Array} arr 
  * @return {number} 
@@ -33,9 +33,8 @@ function getLength(arr) {
   }, 0);
 }
 
-console.log(
-  getLength([1, [2, 3]]),
-  getLength([1, [2, [3, 4]]]),
-  getLength([1, [2, [3, [4, [5, 6]]]]]),
-  getLength([1, [2], 1, [2], 1]),
-)
+
+getLength([1, [2, 3]]),
+getLength([1, [2, [3, 4]]]),
+getLength([1, [2, [3, [4, [5, 6]]]]]),
+getLength([1, [2], 1, [2], 1])
