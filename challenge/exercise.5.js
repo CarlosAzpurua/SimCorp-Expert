@@ -17,13 +17,25 @@ Expected Result
   getLength([1, [2], 1, [2], 1]) ➞ 5
 */
 
-function getLength(arr){
-	//you can show the result as you would like
+/**
+ * Gets the total number of non-nested items in an array. *
+ * 
+ * @param {Array} arr 
+ * @return {number} 
+*/
+
+function getLength(arr) {
+
+  return arr.reduce((count, element) => {
+    
+    return count + (Array.isArray(element) ? getLength(element) : 1 ); // Recursively count if element is an array
+    
+  }, 0);
 }
 
-getLength([1, [2, 3]]);
-getLength([1, [2, [3, 4]]]);
-getLength([1, [2, [3, [4, [5, 6]]]]]);
-getLength([1, [2], 1, [2], 1]);
-
-export default getLength;
+console.log(
+  getLength([1, [2, 3]]),
+  getLength([1, [2, [3, 4]]]),
+  getLength([1, [2, [3, [4, [5, 6]]]]]),
+  getLength([1, [2], 1, [2], 1]),
+)
