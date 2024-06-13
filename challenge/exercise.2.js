@@ -22,6 +22,7 @@ Expect lowercase alphabetic characters only.
 
 */
 
+import { throwErrorIfInvalidType, isString } from './helpers/validation';
 
 /**
  * The substring starts and ends with the separator.
@@ -36,6 +37,8 @@ Expect lowercase alphabetic characters only.
  * @return {Array} 
 */
 function separator(str) {
+
+  throwErrorIfInvalidType(str, isString);
 
   if (str.length < 2 ) {
     return [];

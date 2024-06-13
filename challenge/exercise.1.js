@@ -16,6 +16,8 @@ INFO
 
 */
 
+import { throwErrorIfInvalidType, isArray } from './helpers/validation';
+
 /**
  * A boomerang can be defined as: sub-array of length 3, with the first and last 
  * digits being the same and the middle digit being different. So create a function that returns 
@@ -29,6 +31,8 @@ INFO
  * @return {number} 
  */
 function counter(list) {
+
+  throwErrorIfInvalidType(list, isArray);
 
 	if (list.length < 3) {
     return 0;
