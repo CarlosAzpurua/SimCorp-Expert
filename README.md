@@ -10,6 +10,19 @@ En este desafío, trabajé con una serie de ejercicios que pusieron a prueba mis
 
 Además de resolver los ejercicios, estructuré el código de manera clara y subí la información a mi organización en GitHub. Esto ofrece una visión completa del flujo de trabajo desde la escritura del código hasta su integración en un proyecto
 
+### Pre-requisitos 🛠️
+
+Antes de comenzar, asegúrate de tener instalado Node.js en tu sistema. Puedes descargarlo desde nodejs.org. Además, se recomienda tener conocimientos básicos de JavaScript/TypeScript y el uso de npm.
+
+### Estructura del Proyecto 📂
+
+El proyecto está estructurado de la siguiente manera:
+
+- /src: Contiene los archivos de código fuente en TypeScript.
+- /src/helper: Funciones globales y parcialmente enfocadas para integrarse a un posible patrón DTO (data-transfer-object).
+- /src/tests: Aquí se encuentran los archivos de prueba para las funciones implementadas.
+- /dist: Carpeta generada después de compilar el código TypeScript a JavaScript.
+
 ### Ejercicios Resueltos 📂
 
 Aquí están los ejercicios que he resuelto:
@@ -20,7 +33,7 @@ Aquí están los ejercicios que he resuelto:
 4. Exercise 4
 5. Exercise 5
 
-Cada ejercicio está en su propio archivo y puedes revisar las soluciones directamente para ver cómo fueron implementadas y a su vez ejecutar los test correspondientes por cada funcion
+Cada ejercicio está en su propio archivo dentro de /src y puedes revisar las soluciones directamente para ver cómo fueron implementadas, además de ejecutar los tests correspondientes para cada función
 
 ### Tests (paso a paso) 🧪
 Para asegurar que todas las funciones estén habilitadas y se ejecuten correctamente, puedes utilizar Jest para ejecutar los tests. Aquí están los pasos que puedes seguir para correr los tests:
