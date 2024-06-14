@@ -17,6 +17,8 @@ Expected Result
   getLength([1, [2], 1, [2], 1]) ➞ 5
 */
 
+import { isArray, throwErrorIfInvalidType } from "./helpers/validation";
+
 /**
  * Gets the total number of non-nested items in an array. 
  * 
@@ -24,6 +26,9 @@ Expected Result
  * @return {number} 
  */
 export function getLength(arr: any[]): number {
+
+  throwErrorIfInvalidType(arr, isArray);
+
   return arr.reduce((count, element) => {
 
     return count + (Array.isArray(element) ? getLength(element) : 1 ); // Recursively count if element is an array

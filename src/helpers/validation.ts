@@ -4,7 +4,7 @@
  * @param {*} value 
  * @returns {boolean} true if the value is an array, otherwise false
  */
-export function isArray(value: any) {
+export function isArray(value: any): boolean {
   return Array.isArray(value);
 }
 
@@ -14,7 +14,7 @@ export function isArray(value: any) {
  * @param {*} value 
  * @returns {boolean} true if the value is a string, otherwise false
  */
-export function isString(value: any) {
+export function isString(value: any): boolean {
   return typeof value === 'string' || value instanceof String;
 }
 
@@ -25,7 +25,7 @@ export function isString(value: any) {
  * @param {Function} expectedType The function representing the expected type
  * @throws {Error} If the data type of 'value' does not match 'expectedType'
  */
-export function throwErrorIfInvalidType(value: (string | number)[] | string, expectedType: any) {
+export function throwErrorIfInvalidType(value: (string | number)[] | string, expectedType: any): void {
   if (!expectedType(value)) {
     throw new Error(`Expected type ${expectedType}, but received ${typeof value}`);
   }

@@ -17,7 +17,7 @@ sizeParentheses("()))))(()())(") ➞ 6
 import { isString, throwErrorIfInvalidType } from "./helpers/validation";
 
 /**
- * Calculates the size of the longest substring of balanced parentheses in a string.
+ * Calculates the size of the longest substring of balanced parentheses in a string
  *
  * @param {string} str 
  * @return {number} 
