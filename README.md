@@ -19,7 +19,8 @@ Antes de comenzar, asegúrate de tener instalado Node.js en tu sistema. Puedes d
 El proyecto está estructurado de la siguiente manera:
 
 - /src: Contiene los archivos de código fuente en TypeScript.
-- /tests: Aquí se encuentran los archivos de prueba para las funciones implementadas.
+- /src/helper: Funciones globales y parcialmente enfocadas para integrarse a un posible patrón DTO (data-transfer-object).
+- /src/tests: Aquí se encuentran los archivos de prueba para las funciones implementadas.
 - /dist: Carpeta generada después de compilar el código TypeScript a JavaScript.
 
 ### Ejercicios Resueltos 📂
