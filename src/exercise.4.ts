@@ -14,6 +14,8 @@ sizeParentheses("()))))(()())(") ➞ 6
 
 */
 
+import { isString, throwErrorIfInvalidType } from "./helpers/validation";
+
 /**
  * Calculates the size of the longest substring of balanced parentheses in a string.
  *
@@ -21,6 +23,9 @@ sizeParentheses("()))))(()())(") ➞ 6
  * @return {number} 
  */
 export function sizeParentheses(str: string): number {
+  
+  throwErrorIfInvalidType(str, isString);
+
   const CLOSE_PAREN = ')';
   const OPEN_PAREN = '(';
 
