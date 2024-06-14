@@ -38,4 +38,16 @@ describe('Function separator:', () => {
     // Act and Assert
     expect(separator(twoDifferentChars)).toEqual([]); 
   });
+
+  test('throws error for invalid input', () => {
+    // Arrange
+    const input8: any = 1234;
+    const input9: any = {};
+    const input10: any = ['error'];
+
+    // Act and Assert
+    expect(() => separator(input8)).toThrow(Error);
+    expect(() => separator(input9)).toThrow(Error);
+    expect(() => separator(input10)).toThrow(Error);
+  })
 });
