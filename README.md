@@ -62,7 +62,7 @@ Si no esta familiarizado con Conventional Commits aquí dejo un pequeño ejemplo
 Ejemplo:
 
   ```bash
-   git commit -m "feat: add solution for exercise 1"
+   git commit -m "feat: add a solution for exercise 1"
   ```
 
 Link: [Conventional Commits]
