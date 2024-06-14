@@ -1,4 +1,4 @@
-import getLength from '../exercise.5'
+import {getLength} from '../exercise.5'
 
 describe('Function getLength:', () => {
   test('gets the total number of non nested items in an array', () => {

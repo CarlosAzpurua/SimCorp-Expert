@@ -1,4 +1,4 @@
-import longestSubstring from '../exercise.3'
+import {longestSubstring} from '../exercise.3'
 
 describe('Function longestSubstring:', () => {
   test('finds the longest substring with no repeated characters', () => {
