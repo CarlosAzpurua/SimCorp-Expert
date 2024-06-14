@@ -16,6 +16,8 @@ Bonus: Can you solve this problem in linear time?
 
 */
 
+import { isString, throwErrorIfInvalidType } from "./helpers/validation";
+
 /**
  * This function finds the longest substring in a string with no repeated characters.
  *
@@ -23,6 +25,9 @@ Bonus: Can you solve this problem in linear time?
  * @return {string} 
  */
 export function longestSubstring(str: string): string {
+
+  throwErrorIfInvalidType(str, isString);
+
   if (str.length === 0) return "";
   if (str.length === 1) return str;
 
