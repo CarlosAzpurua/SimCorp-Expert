@@ -27,10 +27,10 @@ import { throwErrorIfInvalidType, isArray } from './helpers/validation';
  * This function counts how many times an element is equal to the element two positions ahead and different from 
  * the element in the middle position in a list 
  * 
- * @param {Array} list 
+ * @param {Array<string | number>} list 
  * @return {number} 
  */
-function counter(list) {
+export function counter(list: (string | number)[]): number  {
 
   throwErrorIfInvalidType(list, isArray);
 
@@ -56,5 +56,3 @@ function counter(list) {
 counter([9, 5, 9, 5, 1, 1, 1]);
 counter([5, 6, 6, 7, 6, 3, 9]);
 counter([4, 4, 4, 9, 9, 9, 9]);
-
-export default counter

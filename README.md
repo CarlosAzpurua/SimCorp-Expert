@@ -4,7 +4,7 @@
 
 ### Descripción General
 
-Bienvenido al Challenge de Funciones de JavaScript
+Bienvenido al Challenge de Funciones de JavaScript/TypeScript!
 
 En este desafío, trabajé con una serie de ejercicios que pusieron a prueba mis habilidades con funciones de JavaScript. Los ejercicios fueron diseñados para ser simples pero efectivos, enfocándose en diferentes aspectos de la manipulación de arreglos y cadenas
 
@@ -23,32 +23,30 @@ Aquí están los ejercicios que he resuelto:
 Cada ejercicio está en su propio archivo y puedes revisar las soluciones directamente para ver cómo fueron implementadas y a su vez ejecutar los test correspondientes por cada funcion
 
 ### Tests (paso a paso) 🧪
+Para asegurar que todas las funciones estén habilitadas y se ejecuten correctamente, puedes utilizar Jest para ejecutar los tests. Aquí están los pasos que puedes seguir para correr los tests:
 
-Para asegurar que todas las funciones están habilitadas y se ejecutan correctamente, puede utilizar Jest para ejecutar los tests. Aquí están los pasos que puede seguir para correr los tests:
-
-1. Instalé Jest con:
-
-    ```bash
+1. Instala Jest y las dependencias necesarias con:
+  ```bash
     npm install 
-    ```
+  ```
+  o si deseas instalar cada elemento de manera individual:
+  ```bash
+    npm install --save-dev jest typescript ts-jest @types/jest @types/node
+  ```
+2. Compila tu código TypeScript a JavaScript utilizando el siguiente comando:
+  ```bash
+    npm run build
+  ```
+3. Corre los tests con el siguiente comando:
+  ```bash
+    npm test
+  ```
 
-   ó si desea instalar cada elemento de manera individual
+  Esto ejecutará todos los tests y verificará que las funciones estén funcionando correctamente.
 
-    ```bash
-    npm install --save-dev jest babel-jest @babel/core @babel/preset-env
-    ```
-
-2. Corre los tests con el siguiente comando:
-
-   ```bash
-   npm test
-   ```
-
-Esto ejecutará todos los tests y verificará que las funciones estén funcionando correctamente.
-
-```bash
-  Nota: El uso de `Babel, @babel/core y @babel/preset-env` es necesario porque Jest necesita soporte para ES6.
-```
+  ```bash
+    Nota: El uso de `ts-jest` y `typescript` es necesario para Jest en entornos TypeScript.
+  ```
 
 #### Proceso de Revisión de Código 🔍
 
@@ -71,7 +69,7 @@ Link: [Conventional Commits]
 
 [Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
 
-4. ***Revisión y Optimización***: Revisé el código para optimizarlo. Esto incluyó la mejora de la eficiencia, limpieza de código y adición de más tests o automatización para asegurar la calidad.
+4. ***Revisión y Optimización***: Revisé el código para optimizarlo. Esto incluyó la mejora de la eficiencia, limpieza de código y adición de más tests o automatización para asegurar la calidad. Por ultimo, migre todo de Javascript a Typescript para mantener un enfoque con tipado.
 
 ### Conclusión 📌
 

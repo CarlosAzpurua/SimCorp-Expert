@@ -14,16 +14,20 @@ sizeParentheses("()))))(()())(") ➞ 6
 
 */
 
+import { isString, throwErrorIfInvalidType } from "./helpers/validation";
 
 /**
- * Calculates the size of the longest substring of balanced parentheses in a string.
+ * Calculates the size of the longest substring of balanced parentheses in a string
  *
  * @param {string} str 
  * @return {number} 
  */
-function sizeParentheses(str) {
-	const CLOSE_PAREN = ')';
-	const OPEN_PAREN = '(';
+export function sizeParentheses(str: string): number {
+  
+  throwErrorIfInvalidType(str, isString);
+
+  const CLOSE_PAREN = ')';
+  const OPEN_PAREN = '(';
 
   if (!str.includes(OPEN_PAREN) || !str.includes(CLOSE_PAREN) || str.length === 0) return 0; 
 
@@ -32,15 +36,15 @@ function sizeParentheses(str) {
   for (let i = 0; i < str.length; i++) {
     const currentChar = str[i];
 
-		if (currentChar === OPEN_PAREN && str[i+1] === CLOSE_PAREN) {
-			maxLength += 2;
-		}
-	}
+    if (currentChar === OPEN_PAREN && str[i+1] === CLOSE_PAREN) {
+      maxLength += 2;
+      i++; // Move to the next character after the closed parenthesis
+    }
+  }
+
   return maxLength; 
 }
 
 sizeParentheses("(()"); // ➞ 2
 sizeParentheses(")()())"); // ➞ 4
 sizeParentheses("()))))(()())("); // ➞ 6
-
-export default sizeParentheses;

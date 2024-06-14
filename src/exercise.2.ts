@@ -21,7 +21,6 @@ All substrings should be at least of length 2 (i.e. no single-letter substrings)
 Expect lowercase alphabetic characters only.
 
 */
-
 import { throwErrorIfInvalidType, isString } from './helpers/validation';
 
 /**
@@ -29,35 +28,34 @@ import { throwErrorIfInvalidType, isString } from './helpers/validation';
  * The separator doesn't occur inside the substring other than at the ends.
  * If two or more separators yield substrings with the same length, they should appear in alphabetical order.
  * 
- * 
  * Finds the characters in a string that have the longest distance between two consecutive 
- * occurrences consecutive without the character repeating in between.
+ * occurrences consecutive without the character repeating in between
  *
  * @param {string} str 
- * @return {Array} 
-*/
-function separator(str) {
+ * @return {string[]} 
+ */
+export function separator(str: string): string[] {
 
   throwErrorIfInvalidType(str, isString);
 
-  if (str.length < 2 ) {
+  if (str.length < 2) {
     return [];
   }
 
-  const charMap = new Map();
-  const result = new Set();
+  const charMap = new Map<string, number>();
+  const result = new Set<string>();
   let maxDistance = 0; 
 
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
 
     if (charMap.has(char)) { // duplication inside
-      const prevIndex = charMap.get(char); 
+      const prevIndex = charMap.get(char)!; 
       const distance = i - prevIndex + 1;
 
       if (distance > maxDistance) { 
         maxDistance = distance;
-        result.clear()
+        result.clear();
         result.add(char);
       } else if (distance === maxDistance) {
         result.add(char);
@@ -67,11 +65,9 @@ function separator(str) {
     }
   }
 
-  return [...result];
+  return Array.from(result);
 }
 
 separator('happyanniversaryqontigo');
 separator('futureofwork');
 separator('Intranet');
-
-export default separator;
